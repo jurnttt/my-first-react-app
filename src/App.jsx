@@ -1,16 +1,10 @@
 import React from 'react';
-import starIcon from './images/icon_star.svg';
 
 // Reusable Star Component
 const Stars = () => (
-  <div className="flex gap-1">
+  <div className="flex gap-1 text-[#f2994a]">
     {[...Array(5)].map((_, i) => (
-      <img 
-        key={i} 
-        src={starIcon} 
-        alt="Star Rating" 
-        className="w-4 h-4" // 👈 Adjust the width and height here
-      />
+      <span key={i} className="text-lg">★</span>
     ))}
   </div>
 );
