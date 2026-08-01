@@ -7,7 +7,10 @@ export default defineConfig({
     react(),
     tailwindcss() 
   ],
-  // Add your exact GitHub repository name below
-  base: './', 
+  base: './',
+  build: {
+    // Splits vendor dependencies (React, etc.) into separate smaller files
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 1000, // Raises the warning limit to 1000 kB
+  }
 });
-
